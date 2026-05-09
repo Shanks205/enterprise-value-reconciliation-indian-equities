@@ -1,0 +1,5 @@
+company,ticker,financial_year,statement_basis,market_price_date,shares_outstanding_crore,share_price_inr,market_cap_inr_crore,total_borrowings_inr_crore,lease_liabilities_inr_crore,minority_interest_inr_crore,preference_capital_inr_crore,cash_and_equivalents_inr_crore,bank_balances_inr_crore,current_investments_inr_crore,other_cash_like_assets_inr_crore,reconstructed_ev_inr_crore,annual_report_url,annual_report_page,note_number,line_item_label,inclusion_decision,researcher_comment,provider_name,provider_ev_inr_crore,provider_data_date,provider_url,deviation_pct,absolute_deviation_pct,materiality_bucket
+BEL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+NALCO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+POLYCAB,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+HEROMOTOCO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
