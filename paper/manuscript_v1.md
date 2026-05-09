@@ -1,7 +1,7 @@
 # Enterprise Value Reconciliation in Indian Equities: A Multi-Provider Audit-Grade Comparison Using Annual Report Data
 
 **Working Paper Draft v1**  
-**Author:** Himanshu Dabi  
+**Authors:** Himanshu Dabi and Hitesh Dabi  
 **Status:** Early research draft  
 
 ## Abstract
