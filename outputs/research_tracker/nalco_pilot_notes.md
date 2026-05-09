@@ -25,12 +25,27 @@ NALCO satisfies the pilot selection criteria:
 
 ### Screener.in
 
-- Accessed/captured from public search result: 2026-05-10
-- Provider page date shown in search result: 2026-04-10
+Two Screener observations are currently documented.
+
+#### Observation 1
+
+- Public provider page date shown in captured result: 2026-04-10
 - Current price shown: INR 417
 - Market capitalization: INR 76,578 crore
-- Provider EV: not visible in the captured search-result snapshot
+- Provider EV: not visible in captured result
 - Status: market capitalization captured; provider EV pending manual verification
+
+#### Observation 2
+
+- Public provider page date shown in captured result: 2026-05-07 close price
+- Current price shown: INR 404
+- Balance-sheet data visible through March 2026
+- Borrowings shown for March 2025: INR 182 crore
+- Borrowings shown for March 2026: INR 60 crore
+- Investments shown for March 2025: INR 774 crore
+- Investments shown for March 2026: INR 533 crore
+- Provider EV: not visible in captured result
+- Status: useful for provider balance-sheet cross-check; EV pending manual verification
 
 ### StockAnalysis
 
@@ -54,11 +69,25 @@ Because provider dates differ, these values should be treated as preliminary unt
 
 ### Yahoo Finance
 
-- Status: pending manual capture
+- Public Yahoo Finance page date shown in captured result: 2026-01-16
+- Market capitalization: INR 663.94 billion, approximately INR 66,394 crore
+- Enterprise value: INR 584.59 billion, approximately INR 58,459 crore
+- EV / Revenue: 3.27
+- EV / EBITDA: 6.54
+- Total cash: INR 79.06 billion, approximately INR 7,906 crore
+- Debt / Equity: 0.28%
+- Status: provider EV and market cap captured, but date is older than StockAnalysis/Screener observations; treat as preliminary and not date-comparable.
 
 ### Moneycontrol
 
-- Status: pending manual capture
+- Public Moneycontrol page date shown in captured result: 2026-05-07, 03:59
+- Current price shown: INR 403.50
+- Revenue shown for 2026: INR 17,843.05 crore
+- Net profit shown for 2026: INR 5,815.76 crore
+- Debt-to-equity shown for 2026: 0.00
+- Provider EV: not visible in captured result
+- Market capitalization: not visible in captured result
+- Status: useful for financial cross-check; EV and market capitalization still pending manual capture.
 
 ## Prior Annual-Report Note-Lock Values
 
@@ -85,7 +114,7 @@ Equivalently:
 Reconstructed EV = Market Cap - Conservative Net Cash
 ```
 
-### Screener market-cap basis
+### Screener market-cap basis, 2026-04-10 observation
 
 ```text
 76,578.00 - 5,817.43 = 70,760.57 crore
@@ -103,9 +132,15 @@ Reconstructed EV = Market Cap - Conservative Net Cash
 77,855.00 - 5,817.43 = 72,037.57 crore
 ```
 
-## Preliminary StockAnalysis Deviation
+### Yahoo Finance 2026-01-16 market-cap basis
 
-### Observation 1: 2026-03-12
+```text
+66,394.00 - 5,817.43 = 60,576.57 crore
+```
+
+## Preliminary Provider Deviation
+
+### StockAnalysis Observation 1: 2026-03-12
 
 ```text
 Provider EV = 67,296.00 crore
@@ -114,7 +149,7 @@ Absolute deviation = -2,032.57 crore
 Percentage deviation = -2.93%
 ```
 
-### Observation 2: 2026-04-15
+### StockAnalysis Observation 2: 2026-04-15
 
 ```text
 Provider EV = 70,005.00 crore
@@ -123,26 +158,42 @@ Absolute deviation = -2,032.57 crore
 Percentage deviation = -2.82%
 ```
 
+### Yahoo Finance Observation: 2026-01-16
+
+```text
+Provider EV = 58,459.00 crore
+Reconstructed EV = 60,576.57 crore
+Absolute deviation = -2,117.57 crore
+Percentage deviation = -3.50%
+```
+
 ## Preliminary Interpretation
 
-NALCO appears more interesting than BEL for the EV reconciliation pilot. The preliminary StockAnalysis observations imply a provider EV below the conservative reconstructed EV by approximately INR 2,033 crore, or around 2.8-2.9%.
+NALCO appears more interesting than BEL for the EV reconciliation pilot. The preliminary StockAnalysis observations imply a provider EV below the conservative reconstructed EV by approximately INR 2,033 crore, or around 2.8-2.9%. The preliminary Yahoo Finance observation implies a provider EV below the conservative reconstructed EV by approximately INR 2,118 crore, or around 3.5%.
 
-This is not yet a high-deviation case, but it falls in the moderate 2-5% bucket. The likely research question is whether StockAnalysis is subtracting a broader set of cash-like or financial assets than the conservative reconstruction, or whether timing and balance-sheet update differences explain the gap.
+This is not yet a high-deviation case, but it falls in the moderate 2-5% bucket. The likely research question is whether providers are subtracting a broader set of cash-like or financial assets than the conservative reconstruction, or whether timing and balance-sheet update differences explain the gap.
 
-The result remains preliminary because provider dates differ and Yahoo Finance, Moneycontrol, and Screener EV values still need manual capture.
+The result remains preliminary because provider dates differ and Moneycontrol/Screener EV values still require manual verification.
 
 ## Data Quality Status
 
 Status: preliminary, needs review.
 
+Completed items:
+
+1. Captured preliminary StockAnalysis market cap and EV.
+2. Captured preliminary Yahoo Finance market cap and EV.
+3. Captured Screener market cap and balance-sheet cross-check items.
+4. Captured Moneycontrol financial cross-check items.
+
 Open items:
 
-1. Capture fixed-date Yahoo Finance market cap and EV.
-2. Capture fixed-date Moneycontrol market cap and EV.
-3. Capture Screener EV if visible or document if unavailable.
-4. Re-verify NALCO annual-report page and note references.
-5. Decide whether the conservative cash-like treatment should include any broader financial assets.
-6. Update the working CSV after all provider values are collected.
+1. Capture fixed-date Moneycontrol market cap and EV if visible.
+2. Capture Screener EV if visible or document if unavailable.
+3. Re-verify NALCO annual-report page and note references.
+4. Decide whether conservative cash-like treatment should include any broader financial assets.
+5. Update the working CSV after all provider values are collected and date-aligned.
+6. Do not treat current observations as final because provider dates are not fully aligned.
 
 ## Current Pilot Signal
 
