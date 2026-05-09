@@ -1,0 +1,17 @@
+company,ticker,sector,archetype,valuation_date,provider,provider_url,provider_access_date,provider_market_cap,provider_ev,provider_currency,provider_unit,provider_notes,annual_report_market_cap_used,reconstructed_ev,absolute_deviation,percentage_deviation,absolute_percentage_deviation,deviation_bucket,data_quality_flag
+Bharat Electronics Ltd,BEL.NS,Defence electronics,Cash-rich PSU,YYYY-MM-DD,Yahoo Finance,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+Bharat Electronics Ltd,BEL.NS,Defence electronics,Cash-rich PSU,YYYY-MM-DD,Screener.in,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+Bharat Electronics Ltd,BEL.NS,Defence electronics,Cash-rich PSU,YYYY-MM-DD,Moneycontrol,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+Bharat Electronics Ltd,BEL.NS,Defence electronics,Cash-rich PSU,YYYY-MM-DD,StockAnalysis,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+NALCO,NATIONALUM.NS,Metals,Cash-rich commodity PSU,YYYY-MM-DD,Yahoo Finance,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+NALCO,NATIONALUM.NS,Metals,Cash-rich commodity PSU,YYYY-MM-DD,Screener.in,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+NALCO,NATIONALUM.NS,Metals,Cash-rich commodity PSU,YYYY-MM-DD,Moneycontrol,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+NALCO,NATIONALUM.NS,Metals,Cash-rich commodity PSU,YYYY-MM-DD,StockAnalysis,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+Polycab India Ltd,POLYCAB.NS,Cables and electricals,Quality compounder,YYYY-MM-DD,Yahoo Finance,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+Polycab India Ltd,POLYCAB.NS,Cables and electricals,Quality compounder,YYYY-MM-DD,Screener.in,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+Polycab India Ltd,POLYCAB.NS,Cables and electricals,Quality compounder,YYYY-MM-DD,Moneycontrol,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+Polycab India Ltd,POLYCAB.NS,Cables and electricals,Quality compounder,YYYY-MM-DD,StockAnalysis,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+Hero MotoCorp Ltd,HEROMOTOCO.NS,Automobiles,Mature cash-flow company,YYYY-MM-DD,Yahoo Finance,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+Hero MotoCorp Ltd,HEROMOTOCO.NS,Automobiles,Mature cash-flow company,YYYY-MM-DD,Screener.in,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+Hero MotoCorp Ltd,HEROMOTOCO.NS,Automobiles,Mature cash-flow company,YYYY-MM-DD,Moneycontrol,,YYYY-MM-DD,,,,,,,,,,,,needs_review
+Hero MotoCorp Ltd,HEROMOTOCO.NS,Automobiles,Mature cash-flow company,YYYY-MM-DD,StockAnalysis,,YYYY-MM-DD,,,,,,,,,,,,needs_review
