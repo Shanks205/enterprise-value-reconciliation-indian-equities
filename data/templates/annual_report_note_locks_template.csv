@@ -1,0 +1,23 @@
+company,ticker,annual_report_year,annual_report_url,page_reference,note_reference,line_item,reported_value,reported_unit,standardized_value_crore,treatment,include_in_ev_formula,extraction_notes,data_quality_flag
+Bharat Electronics Ltd,BEL.NS,FY2024-25,,,,'Cash and cash equivalents',,,,subtract,yes,,needs_review
+Bharat Electronics Ltd,BEL.NS,FY2024-25,,,,'Bank balances other than cash and cash equivalents',,,,subtract_if_cash_like,yes,,needs_review
+Bharat Electronics Ltd,BEL.NS,FY2024-25,,,,'Current investments',,,,subtract_if_cash_like,review,,needs_review
+Bharat Electronics Ltd,BEL.NS,FY2024-25,,,,'Non-current investments',,,,disclose_separately,review,,needs_review
+Bharat Electronics Ltd,BEL.NS,FY2024-25,,,,'Short-term borrowings',,,,add,yes,,needs_review
+Bharat Electronics Ltd,BEL.NS,FY2024-25,,,,'Long-term borrowings',,,,add,yes,,needs_review
+Bharat Electronics Ltd,BEL.NS,FY2024-25,,,,'Lease liabilities',,,,add_if_material,review,,needs_review
+NALCO,NATIONALUM.NS,FY2024-25,,,,'Cash and cash equivalents',,,,subtract,yes,,needs_review
+NALCO,NATIONALUM.NS,FY2024-25,,,,'Bank balances other than cash and cash equivalents',,,,subtract_if_cash_like,yes,,needs_review
+NALCO,NATIONALUM.NS,FY2024-25,,,,'Current investments',,,,subtract_if_cash_like,yes,,needs_review
+NALCO,NATIONALUM.NS,FY2024-25,,,,'Short-term borrowings',,,,add,yes,,needs_review
+NALCO,NATIONALUM.NS,FY2024-25,,,,'Long-term borrowings',,,,add,yes,,needs_review
+Polycab India Ltd,POLYCAB.NS,FY2024-25,,,,'Cash and cash equivalents',,,,subtract,yes,,needs_review
+Polycab India Ltd,POLYCAB.NS,FY2024-25,,,,'Bank balances other than cash and cash equivalents',,,,subtract_if_cash_like,review,,needs_review
+Polycab India Ltd,POLYCAB.NS,FY2024-25,,,,'Current investments',,,,subtract_if_cash_like,review,,needs_review
+Polycab India Ltd,POLYCAB.NS,FY2024-25,,,,'Borrowings',,,,add,yes,,needs_review
+Polycab India Ltd,POLYCAB.NS,FY2024-25,,,,'Lease liabilities',,,,add_if_material,review,,needs_review
+Hero MotoCorp Ltd,HEROMOTOCO.NS,FY2024-25,,,,'Cash and cash equivalents',,,,subtract,yes,,needs_review
+Hero MotoCorp Ltd,HEROMOTOCO.NS,FY2024-25,,,,'Bank balances other than cash and cash equivalents',,,,subtract_if_cash_like,review,,needs_review
+Hero MotoCorp Ltd,HEROMOTOCO.NS,FY2024-25,,,,'Current investments',,,,subtract_if_cash_like,review,,needs_review
+Hero MotoCorp Ltd,HEROMOTOCO.NS,FY2024-25,,,,'Borrowings',,,,add,yes,,needs_review
+Hero MotoCorp Ltd,HEROMOTOCO.NS,FY2024-25,,,,'Lease liabilities',,,,add_if_material,review,,needs_review
