@@ -8,6 +8,11 @@ This repository supports a research paper on enterprise value (EV) reconciliatio
 
 **Enterprise Value Reconciliation in Indian Equities: A Multi-Provider Audit-Grade Comparison Using Annual Report Data**
 
+## Authors
+
+- **Himanshu Dabi** — Independent Researcher, India
+- **Hitesh Dabi** — Independent Researcher, India
+
 ## Research Objective
 
 This project investigates whether publicly available financial-data providers report materially different enterprise value figures for Indian listed equities when compared with an annual-report-based reconstructed EV bridge.
@@ -130,10 +135,6 @@ Next task: Collect provider EV values and annual-report EV bridge components for
 - Mark missing or ambiguous values clearly.
 - Treat small deviations honestly.
 - Avoid language implying provider error unless the definition mismatch is documented.
-
-## Author
-
-Himanshu Dabi
 
 ## Disclaimer
 
