@@ -15,7 +15,7 @@ Polycab satisfies the pilot selection criteria:
 - Non-financial Indian listed company.
 - EV/EBITDA and EV/Sales are relevant valuation metrics.
 - Public provider coverage is available.
-- Annual-report cash, bank balances, investments, borrowings, and lease-liability items are relevant to reconstructing EV.
+- Annual-report cash, bank balances, investments, borrowings, acceptances, and lease-liability items are relevant to reconstructing EV.
 - Premium valuation makes even moderate EV differences potentially important for multiple interpretation.
 - It adds a quality compounder case to contrast with BEL and NALCO.
 
@@ -78,102 +78,140 @@ Two Moneycontrol ratio observations are documented.
 
 - Status: pending direct capture. Search results did not provide a clean current Yahoo Finance market-cap and EV pair in INR crore.
 
-## FY2024-25 Annual-Report / Company-Report Values
+## FY2024-25 Annual-Report Note-Lock Values
 
-Polycab's FY2024-25 integrated annual report provides consolidated financial context and a company-level cash-position disclosure.
+Polycab's FY2024-25 integrated annual report has now been uploaded and note-locked. The consolidated balance sheet provides granular EV bridge items.
 
-Key extracted values from the annual-report website:
+| Item | Value (INR million) | Value (INR crore) | Note | Treatment |
+|---|---:|---:|---|---|
+| Current investments | 17,490.42 | 1,749.04 | Note 7B | Subtract if cash-like |
+| Cash and cash equivalents | 2,173.87 | 217.39 | Note 9 | Subtract |
+| Bank balance other than cash and cash equivalents | 5,532.49 | 553.25 | Note 10 | Subtract if cash-like |
+| Non-current borrowings | 419.40 | 41.94 | Note 19A | Add |
+| Current borrowings | 670.64 | 67.06 | Note 19B | Add |
+| Non-current lease liabilities | 709.34 | 70.93 | Note 20A | Add in lease-adjusted EV |
+| Current lease liabilities | 224.99 | 22.50 | Note 20B | Add in lease-adjusted EV |
+| Acceptances | 13,062.37 | 1,306.24 | Note 21 | Disclose separately / sensitivity |
+| Company-disclosed net cash | 24,572.00 | 2,457.20 | Value creation page | Cross-check |
 
-| Item | Value | INR crore equivalent | Treatment |
-|---|---:|---:|---|
-| Cash position including cash and cash equivalents, other bank balances, and current investments | INR 25,197 million | INR 2,519.70 crore | Aggregate cash-like assets; subtract in aggregate bridge |
-| Net cash | INR 24,572 million | INR 2,457.20 crore | Useful company-disclosed net-cash cross-check |
-| Total borrowings | INR 1,090 million | INR 109.00 crore | Add as debt-like item |
-| Revenue FY2024-25 | INR 224,083 million | INR 22,408.30 crore | Valuation denominator / context |
-| EBITDA FY2024-25 | INR 29,602 million | INR 2,960.20 crore | Valuation denominator / context |
-| PAT FY2024-25 | INR 20,455 million | INR 2,045.50 crore | Profitability context |
-| Paid-up share capital | INR 1,504 million | INR 150.40 crore | Equity capital context |
+## Annual-Report Evidence Notes
 
-## Current Data Limitation
+The consolidated balance sheet shows current investments of INR 17,490.42 million, cash and cash equivalents of INR 2,173.87 million, and bank balances other than cash and cash equivalents of INR 5,532.49 million. It also reports non-current borrowings of INR 419.40 million, current borrowings of INR 670.64 million, current lease liabilities of INR 224.99 million, and non-current lease liabilities of INR 709.34 million.
 
-The current annual-report website gives aggregate cash position and borrowings, but the granular note-level split for cash and cash equivalents, bank balances, current investments, current borrowings, and lease liabilities still requires direct PDF note-lock verification.
+The cash flow statement separately reconciles cash and cash equivalents at INR 2,173.87 million and breaks this into bank current accounts, deposits with original maturity below three months, and cash in hand.
 
-Therefore, Polycab's current EV bridge is treated as preliminary and aggregate-based, not final audit-grade.
+Note 21 reports acceptances of INR 13,062.37 million. The accounting policy explains that these arise from usance letters of credit issued under non-fund-based working-capital limits for purchases, mainly raw materials, and are recognised as operating in nature on the balance sheet. Because acceptances are economically important but not straightforward conventional debt, they should be disclosed separately and tested as a sensitivity rather than automatically included in base EV.
 
-## Preliminary EV Bridge
+## Audit-Grade EV Bridge
 
-### Aggregate cash-like treatment
-
-```text
-Aggregate cash-like assets = Cash position disclosed by company
-Aggregate cash-like assets = 2,519.70 crore
-```
-
-### Conservative net cash using cash position and borrowings
+### Base cash-like assets
 
 ```text
-Conservative net cash = Cash position - Total borrowings
-Conservative net cash = 2,519.70 - 109.00 = 2,410.70 crore
+Cash-like assets = Current investments + Cash and cash equivalents + Bank balances
+Cash-like assets = 1,749.04 + 217.39 + 553.25 = 2,519.68 crore
 ```
 
-### Company-disclosed net cash cross-check
+### Gross borrowings
 
 ```text
-Company-disclosed net cash = 2,457.20 crore
+Gross borrowings = Non-current borrowings + Current borrowings
+Gross borrowings = 41.94 + 67.06 = 109.00 crore
 ```
 
-Because the company-disclosed net cash differs from cash-position-minus-borrowings by approximately INR 46.50 crore, both numbers should be retained until note-level classification is completed.
+### Conservative net cash before lease adjustment
+
+```text
+Conservative net cash = Cash-like assets - Gross borrowings
+Conservative net cash = 2,519.68 - 109.00 = 2,410.68 crore
+```
+
+### Lease-adjusted net cash
+
+```text
+Total lease liabilities = 70.93 + 22.50 = 93.43 crore
+Lease-adjusted net cash = 2,410.68 - 93.43 = 2,317.25 crore
+```
+
+### Acceptances-adjusted net cash sensitivity
+
+```text
+Acceptances = 1,306.24 crore
+Acceptances-adjusted net cash = 2,410.68 - 1,306.24 = 1,104.44 crore
+```
+
+### Full debt-like sensitivity including leases and acceptances
+
+```text
+Full debt-like adjusted net cash = 2,410.68 - 93.43 - 1,306.24 = 1,011.01 crore
+```
 
 ## Preliminary Reconstructed EV
 
 ### StockAnalysis precise market-cap basis
 
-Using aggregate conservative net cash:
+Using conservative net cash:
 
 ```text
 Market cap = 135,544.70 crore
-Conservative net cash = 2,410.70 crore
-Reconstructed EV = 135,544.70 - 2,410.70 = 133,134.00 crore
+Conservative net cash = 2,410.68 crore
+Reconstructed EV = 135,544.70 - 2,410.68 = 133,134.02 crore
 ```
 
-Using company-disclosed net cash:
+Using lease-adjusted net cash:
 
 ```text
 Market cap = 135,544.70 crore
-Company-disclosed net cash = 2,457.20 crore
-Reconstructed EV = 135,544.70 - 2,457.20 = 133,087.50 crore
+Lease-adjusted net cash = 2,317.25 crore
+Reconstructed EV = 135,544.70 - 2,317.25 = 133,227.45 crore
+```
+
+Using full debt-like sensitivity including acceptances and leases:
+
+```text
+Market cap = 135,544.70 crore
+Full debt-like adjusted net cash = 1,011.01 crore
+Reconstructed EV = 135,544.70 - 1,011.01 = 134,533.69 crore
 ```
 
 ### Screener market-cap basis
 
-Using aggregate conservative net cash:
+Using conservative net cash:
 
 ```text
 Market cap = 135,510.00 crore
-Conservative net cash = 2,410.70 crore
-Reconstructed EV = 135,510.00 - 2,410.70 = 133,099.30 crore
+Conservative net cash = 2,410.68 crore
+Reconstructed EV = 135,510.00 - 2,410.68 = 133,099.32 crore
 ```
 
 ## Preliminary Provider Deviation
 
 ### StockAnalysis precise observation
 
-Using aggregate conservative net cash:
+Using conservative net cash:
 
 ```text
 Provider EV = 131,611.10 crore
-Reconstructed EV = 133,134.00 crore
-Absolute deviation = -1,522.90 crore
+Reconstructed EV = 133,134.02 crore
+Absolute deviation = -1,522.92 crore
 Percentage deviation = -1.14%
 ```
 
-Using company-disclosed net cash:
+Using lease-adjusted net cash:
 
 ```text
 Provider EV = 131,611.10 crore
-Reconstructed EV = 133,087.50 crore
-Absolute deviation = -1,476.40 crore
-Percentage deviation = -1.11%
+Reconstructed EV = 133,227.45 crore
+Absolute deviation = -1,616.35 crore
+Percentage deviation = -1.21%
+```
+
+Using full debt-like sensitivity including acceptances and leases:
+
+```text
+Provider EV = 131,611.10 crore
+Reconstructed EV = 134,533.69 crore
+Absolute deviation = -2,922.59 crore
+Percentage deviation = -2.17%
 ```
 
 ### Moneycontrol current / FY2026 ratio-table observation
@@ -182,8 +220,8 @@ This value is not directly date-aligned with the current StockAnalysis/Screener 
 
 ```text
 Provider EV = 102,227.40 crore
-Reconstructed EV on StockAnalysis market-cap basis = 133,134.00 crore
-Apparent deviation = -30,906.60 crore
+Reconstructed EV on StockAnalysis market-cap basis = 133,134.02 crore
+Apparent deviation = -30,906.62 crore
 Apparent percentage deviation = -23.21%
 ```
 
@@ -191,34 +229,31 @@ This apparent deviation should not be treated as a current provider error withou
 
 ## Preliminary Interpretation
 
-Polycab currently behaves more like a low-deviation reliability case when using StockAnalysis and the FY2024-25 aggregate cash-position bridge. The StockAnalysis EV is approximately 1.1% below reconstructed EV, which falls below the 2% low-deviation threshold.
+Polycab now has a proper annual-report note-lock. Under the conservative EV bridge, StockAnalysis EV is approximately 1.14% below annual-report reconstructed EV, which falls below the 2% low-deviation threshold. Under a full debt-like sensitivity that includes leases and acceptances, the deviation rises to approximately 2.17%, moving into the lower end of the moderate bucket.
 
-However, Moneycontrol's EV ratio table appears materially lower than the current StockAnalysis-based reconstructed EV. This may reflect date mismatch, fiscal-period linkage, or an older market-cap basis rather than a true current EV error. It should be excluded from the main deviation table until its date basis is verified.
+The important research contribution from Polycab is not a dramatic provider error. It is the treatment of acceptances. Polycab reports INR 1,306.24 crore of acceptances, and the annual-report accounting policy classifies them as operating in nature even though the financing mechanism uses bank letters of credit and finance cost. This creates a genuine EV-definition question: should acceptances be included as debt-like obligations for enterprise value comparability, or disclosed separately as operating working-capital financing?
 
-The useful research role for Polycab is therefore twofold:
-
-1. It provides a premium compounder case where StockAnalysis EV appears relatively close to reconstructed EV.
-2. It highlights the danger of mixing provider ratio-table EV values across different dates or fiscal-period bases.
+The base paper should disclose acceptances separately and present a sensitivity. That is more defensible than forcing them into the main EV formula.
 
 ## Data Quality Status
 
-Status: preliminary, needs note-level annual-report verification.
+Status: annual-report note lock completed; provider date alignment still needs review.
 
 Completed items:
 
 1. Captured StockAnalysis market cap and EV.
 2. Captured Screener market cap and balance-sheet cross-check items.
 3. Captured Moneycontrol EV ratio-table observations.
-4. Captured annual-report website aggregate cash position, net cash, borrowings, revenue, EBITDA, and PAT.
-5. Built preliminary aggregate-based EV bridge.
+4. Uploaded and parsed Polycab FY2024-25 integrated annual report.
+5. Completed annual-report note lock for current investments, cash, bank balances, borrowings, lease liabilities, and acceptances.
+6. Built conservative, lease-adjusted, and acceptances-adjusted EV bridge views.
 
 Open items:
 
 1. Capture Yahoo Finance market cap and EV.
-2. Download or parse the FY2024-25 annual report PDF for note-level cash, bank balance, current investment, borrowings, and lease liability lines.
-3. Verify whether Moneycontrol current EV is based on current price, FY2026 market cap, or a historical ratio-table basis.
-4. Verify whether StockAnalysis EV includes leases or only borrowings net of cash.
-5. Convert this note into a formal output table after note-level annual-report extraction.
+2. Verify whether Moneycontrol current EV is based on current price, FY2026 market cap, or a historical ratio-table basis.
+3. Verify whether StockAnalysis EV includes leases or only borrowings net of cash.
+4. Convert this note into a formal output table.
 
 ## Current Pilot Signal
 
@@ -226,4 +261,4 @@ BEL currently looks like a low-deviation reliability benchmark.
 
 NALCO currently looks like a moderate-deviation cash-rich commodity case.
 
-Polycab currently looks like a low-deviation premium-compounder case under StockAnalysis, with Moneycontrol requiring date-basis verification.
+Polycab currently looks like a low-deviation premium-compounder case under conservative treatment, but a moderate-definition-sensitivity case if acceptances are treated as debt-like obligations.
