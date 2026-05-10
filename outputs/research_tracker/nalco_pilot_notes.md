@@ -33,7 +33,7 @@ Two Screener observations are currently documented.
 - Current price shown: INR 417
 - Market capitalization: INR 76,578 crore
 - Provider EV: not visible in captured result
-- Status: market capitalization captured; provider EV pending manual verification
+- Status: market capitalization captured; provider EV not visible in available capture.
 
 #### Observation 2
 
@@ -45,11 +45,11 @@ Two Screener observations are currently documented.
 - Investments shown for March 2025: INR 774 crore
 - Investments shown for March 2026: INR 533 crore
 - Provider EV: not visible in captured result
-- Status: useful for provider balance-sheet cross-check; EV pending manual verification
+- Status: useful for provider balance-sheet cross-check; EV not visible in available capture.
 
 ### StockAnalysis
 
-Two StockAnalysis observations are currently available from public search results:
+Three StockAnalysis observations are currently documented.
 
 #### Observation 1
 
@@ -65,29 +65,49 @@ Two StockAnalysis observations are currently available from public search result
 - Market capitalization: INR 778.55 billion, approximately INR 77,855 crore
 - Enterprise value: INR 700.05 billion, approximately INR 70,005 crore
 
+#### Observation 3
+
+- Page: NSE:NATIONALUM Statistics
+- Provider date shown: 2026-05-08
+- Market capitalization: INR 741.08 billion, approximately INR 74,108 crore
+- Enterprise value: INR 654.67 billion, approximately INR 65,467 crore
+- Status: later StockAnalysis snapshot; still preliminary until fixed-date protocol is finalized.
+
 Because provider dates differ, these values should be treated as preliminary until a fixed-date provider snapshot is manually captured.
 
 ### Yahoo Finance
 
-- Public Yahoo Finance page date shown in captured result: 2026-01-16
-- Market capitalization: INR 663.94 billion, approximately INR 66,394 crore
-- Enterprise value: INR 584.59 billion, approximately INR 58,459 crore
-- EV / Revenue: 3.27
-- EV / EBITDA: 6.54
-- Total cash: INR 79.06 billion, approximately INR 7,906 crore
-- Debt / Equity: 0.28%
-- Status: provider EV and market cap captured, but date is older than StockAnalysis/Screener observations; treat as preliminary and not date-comparable.
+- Public Yahoo Finance page date shown in captured result: around May 2026 / prior capture also noted 2026-01-16
+- Market capitalization: approximately INR 74,209 crore from Perplexity source-discovery output; earlier captured observation showed approximately INR 66,394 crore
+- Enterprise value: approximately INR 66,274 crore from Perplexity source-discovery output; earlier captured observation showed approximately INR 58,459 crore
+- EV / Revenue: 3.27 in earlier captured observation
+- EV / EBITDA: 6.54 in earlier captured observation
+- Total cash: approximately INR 7,906 crore in earlier captured observation
+- Debt / Equity: 0.28% in earlier captured observation
+- Status: provider EV and market cap captured, but date alignment needs review.
 
 ### Moneycontrol
 
 - Public Moneycontrol page date shown in captured result: 2026-05-07, 03:59
 - Current price shown: INR 403.50
+- Market capitalization from Perplexity source-discovery output: INR 73,823 crore
 - Revenue shown for 2026: INR 17,843.05 crore
 - Net profit shown for 2026: INR 5,815.76 crore
 - Debt-to-equity shown for 2026: 0.00
-- Provider EV: not visible in captured result
-- Market capitalization: not visible in captured result
-- Status: useful for financial cross-check; EV and market capitalization still pending manual capture.
+- Current Moneycontrol provider EV: not visible in available current capture
+- Historical Moneycontrol ratios page showed older EV values, including an Enterprise Value line of INR 26,939.71 crore in a historical ratios table. This is not comparable to the current May 2026 market-cap snapshot and should not be used as current provider EV.
+- Status: current market capitalization useful; current EV remains not visible. Historical EV ratios page excluded from current deviation calculation.
+
+## Provider Visibility Conclusion
+
+For the current NALCO pilot stage:
+
+| Provider | Market cap status | EV status | Use in deviation table? |
+|---|---|---|---|
+| StockAnalysis | Captured | Captured | Yes, preliminary |
+| Yahoo Finance | Captured through source-discovery output | Captured through source-discovery output | Yes, preliminary with date-warning |
+| Screener.in | Captured | Not visible in available capture | No, EV missing |
+| Moneycontrol | Captured through source-discovery output | Not visible in current capture | No, EV missing |
 
 ## FY2024-25 Annual-Report Note-Lock Values
 
@@ -159,10 +179,28 @@ Reconstructed EV = Market Cap - Conservative Net Cash
 77,855.00 - 5,817.43 = 72,037.57 crore
 ```
 
-### Yahoo Finance 2026-01-16 market-cap basis
+### StockAnalysis 2026-05-08 market-cap basis
+
+```text
+74,108.00 - 5,817.43 = 68,290.57 crore
+```
+
+### Yahoo Finance approximate May 2026 market-cap basis
+
+```text
+74,209.00 - 5,817.43 = 68,391.57 crore
+```
+
+### Yahoo Finance earlier captured market-cap basis
 
 ```text
 66,394.00 - 5,817.43 = 60,576.57 crore
+```
+
+### Moneycontrol market-cap basis
+
+```text
+73,823.00 - 5,817.43 = 68,005.57 crore
 ```
 
 ## Preliminary Provider Deviation
@@ -185,7 +223,25 @@ Absolute deviation = -2,032.57 crore
 Percentage deviation = -2.82%
 ```
 
-### Yahoo Finance Observation: 2026-01-16
+### StockAnalysis Observation 3: 2026-05-08
+
+```text
+Provider EV = 65,467.00 crore
+Reconstructed EV = 68,290.57 crore
+Absolute deviation = -2,823.57 crore
+Percentage deviation = -4.13%
+```
+
+### Yahoo Finance approximate May 2026 observation
+
+```text
+Provider EV = 66,274.00 crore
+Reconstructed EV = 68,391.57 crore
+Absolute deviation = -2,117.57 crore
+Percentage deviation = -3.10%
+```
+
+### Yahoo Finance earlier captured observation
 
 ```text
 Provider EV = 58,459.00 crore
@@ -196,11 +252,11 @@ Percentage deviation = -3.50%
 
 ## Preliminary Interpretation
 
-NALCO appears more interesting than BEL for the EV reconciliation pilot. The preliminary StockAnalysis observations imply a provider EV below the conservative reconstructed EV by approximately INR 2,033 crore, or around 2.8-2.9%. The preliminary Yahoo Finance observation implies a provider EV below the conservative reconstructed EV by approximately INR 2,118 crore, or around 3.5%.
+NALCO appears more interesting than BEL for the EV reconciliation pilot. StockAnalysis and Yahoo Finance observations imply provider EV below conservative reconstructed EV by roughly 2.8% to 4.1%, depending on provider date and market-cap basis.
 
-This is not yet a high-deviation case, but it falls in the moderate 2-5% bucket. The likely research question is whether providers are subtracting a broader set of cash-like or financial assets than the conservative reconstruction, whether they treat leases differently, or whether timing and balance-sheet update differences explain the gap.
+This is not yet a high-deviation case, but it consistently falls in the moderate 2-5% bucket for the provider EV values currently visible. The likely research question is whether providers are subtracting a broader set of cash-like or financial assets than the conservative reconstruction, whether they treat leases differently, or whether timing and balance-sheet update differences explain the gap.
 
-The result remains preliminary because provider dates differ and Moneycontrol/Screener EV values still require manual verification.
+Screener and Moneycontrol are currently useful for market-cap or financial cross-checks, but their current EV values are not visible in the available captures. They should therefore be excluded from NALCO provider-deviation calculations until manually verified.
 
 ## Data Quality Status
 
@@ -214,14 +270,14 @@ Completed items:
 4. Captured Moneycontrol financial cross-check items.
 5. Uploaded FY2024-25 NALCO annual report.
 6. Completed annual-report note lock for current investments, cash and cash equivalents, bank balances, borrowings, and lease liabilities.
+7. Documented that current Screener EV is not visible in available capture.
+8. Documented that current Moneycontrol EV is not visible in available capture; historical Moneycontrol EV ratios are excluded from current comparison.
 
 Open items:
 
-1. Capture fixed-date Moneycontrol market cap and EV if visible.
-2. Capture Screener EV if visible or document if unavailable.
-3. Verify whether provider EV values are lease-adjusted or non-lease-adjusted.
-4. Update the working CSV after all provider values are collected and date-aligned.
-5. Do not treat current observations as final because provider dates are not fully aligned.
+1. Verify whether provider EV values are lease-adjusted or non-lease-adjusted.
+2. Update the working CSV after all provider values are collected and date-aligned.
+3. Do not treat current observations as final because provider dates are not fully aligned.
 
 ## Current Pilot Signal
 
