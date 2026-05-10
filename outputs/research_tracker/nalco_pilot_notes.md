@@ -6,7 +6,7 @@ National Aluminium Company Ltd (NATIONALUM.NS)
 
 ## Role in Pilot
 
-NALCO is the second pilot company because it is a cash-rich public-sector commodity/metals company. It is useful for testing whether public provider enterprise value (EV) properly reflects large cash-like assets, bank balances, current investments, and limited borrowings.
+NALCO is the second pilot company because it is a cash-rich public-sector commodity/metals company. It is useful for testing whether public provider enterprise value (EV) properly reflects large cash-like assets, bank balances, current investments, lease liabilities, and limited borrowings.
 
 Unlike BEL, which currently appears to behave like a clean reliability benchmark, NALCO is expected to be a more sensitive EV bridge case because commodity companies are often valued using EV-based multiples and because net cash can materially affect operating-business valuation.
 
@@ -17,7 +17,7 @@ NALCO satisfies the pilot selection criteria:
 - Non-financial Indian listed company.
 - EV/EBITDA and EV/Sales are relevant for commodity-cycle valuation.
 - Public provider coverage is available.
-- Annual-report cash, bank balances, investments, and borrowings can be note-locked.
+- Annual-report cash, bank balances, investments, borrowings, and lease liabilities can be note-locked.
 - Balance-sheet structure is materially cash-rich.
 - PSU/commodity status creates a different test case from BEL, Polycab, and Hero MotoCorp.
 
@@ -89,16 +89,43 @@ Because provider dates differ, these values should be treated as preliminary unt
 - Market capitalization: not visible in captured result
 - Status: useful for financial cross-check; EV and market capitalization still pending manual capture.
 
-## Prior Annual-Report Note-Lock Values
+## FY2024-25 Annual-Report Note-Lock Values
 
-From the earlier Monte Carlo DCF project, the NALCO annual-report lock used:
+The FY2024-25 annual report balance sheet provides the audit-grade source for NALCO's EV bridge. The values below are extracted from the standalone balance sheet, page 154 / PDF page 156.
 
-- Cash and cash equivalents: INR 121.40 crore
-- Bank balances other than cash and cash equivalents: INR 5,305.33 crore
-- Current investments: INR 514.92 crore
-- Current borrowings: INR 124.22 crore
-- Cash-like assets: INR 5,941.65 crore
-- Conservative net cash after current borrowings: INR 5,817.43 crore
+| Item | Value (INR crore) | Note | Treatment |
+|---|---:|---|---|
+| Current investments | 514.92 | Note 9 | Subtract if cash-like |
+| Cash and cash equivalents | 121.40 | Note 16 | Subtract |
+| Bank balances other than cash and equivalents | 5,305.33 | Note 16 | Subtract if cash-like |
+| Current borrowings | 124.22 | Note 20 | Add |
+| Non-current lease liabilities | 50.94 | Note 19 | Add if lease-adjusted EV is used |
+| Current lease liabilities | 6.58 | Note 19 | Add if lease-adjusted EV is used |
+| Non-current investments in joint ventures | 499.58 | Note 9 | Disclose separately; not automatically cash-like |
+| Other non-current investments | 0.03 | Note 9 | Disclose separately; immaterial |
+
+## Audit-Grade EV Bridge
+
+### Conservative cash-like assets
+
+```text
+Cash-like assets = Cash and cash equivalents + Bank balances + Current investments
+Cash-like assets = 121.40 + 5,305.33 + 514.92 = 5,941.65 crore
+```
+
+### Conservative net cash before lease adjustment
+
+```text
+Conservative net cash = Cash-like assets - Current borrowings
+Conservative net cash = 5,941.65 - 124.22 = 5,817.43 crore
+```
+
+### Lease-adjusted net cash
+
+```text
+Total lease liabilities = 50.94 + 6.58 = 57.52 crore
+Lease-adjusted net cash = 5,817.43 - 57.52 = 5,759.91 crore
+```
 
 ## Preliminary Reconstructed EV
 
@@ -171,13 +198,13 @@ Percentage deviation = -3.50%
 
 NALCO appears more interesting than BEL for the EV reconciliation pilot. The preliminary StockAnalysis observations imply a provider EV below the conservative reconstructed EV by approximately INR 2,033 crore, or around 2.8-2.9%. The preliminary Yahoo Finance observation implies a provider EV below the conservative reconstructed EV by approximately INR 2,118 crore, or around 3.5%.
 
-This is not yet a high-deviation case, but it falls in the moderate 2-5% bucket. The likely research question is whether providers are subtracting a broader set of cash-like or financial assets than the conservative reconstruction, or whether timing and balance-sheet update differences explain the gap.
+This is not yet a high-deviation case, but it falls in the moderate 2-5% bucket. The likely research question is whether providers are subtracting a broader set of cash-like or financial assets than the conservative reconstruction, whether they treat leases differently, or whether timing and balance-sheet update differences explain the gap.
 
 The result remains preliminary because provider dates differ and Moneycontrol/Screener EV values still require manual verification.
 
 ## Data Quality Status
 
-Status: preliminary, needs review.
+Status: annual-report note lock completed; provider date alignment still needs review.
 
 Completed items:
 
@@ -185,15 +212,16 @@ Completed items:
 2. Captured preliminary Yahoo Finance market cap and EV.
 3. Captured Screener market cap and balance-sheet cross-check items.
 4. Captured Moneycontrol financial cross-check items.
+5. Uploaded FY2024-25 NALCO annual report.
+6. Completed annual-report note lock for current investments, cash and cash equivalents, bank balances, borrowings, and lease liabilities.
 
 Open items:
 
 1. Capture fixed-date Moneycontrol market cap and EV if visible.
 2. Capture Screener EV if visible or document if unavailable.
-3. Re-verify NALCO annual-report page and note references.
-4. Decide whether conservative cash-like treatment should include any broader financial assets.
-5. Update the working CSV after all provider values are collected and date-aligned.
-6. Do not treat current observations as final because provider dates are not fully aligned.
+3. Verify whether provider EV values are lease-adjusted or non-lease-adjusted.
+4. Update the working CSV after all provider values are collected and date-aligned.
+5. Do not treat current observations as final because provider dates are not fully aligned.
 
 ## Current Pilot Signal
 
@@ -201,4 +229,4 @@ BEL currently looks like a low-deviation reliability benchmark.
 
 NALCO currently looks like a moderate-deviation cash-rich commodity case.
 
-This supports the paper's framing: public provider EV may be reliable in some cases and moderately divergent in others depending on cash/investment treatment, provider timing, and balance-sheet complexity.
+This supports the paper's framing: public provider EV may be reliable in some cases and moderately divergent in others depending on cash/investment treatment, provider timing, lease treatment, and balance-sheet complexity.
